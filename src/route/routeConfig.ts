@@ -7,6 +7,7 @@ import CustomerInvoice from "../components/pages/invoice/CustomerInvoice";
 import ProductList from "../components/pages/product/ProductList";
 import CustomersList from "../components/pages/user/CustomersList";
 import InvoiceList from "../components/pages/invoice/InvoiceList";
+import ParentComponent from "../components/test/ParentComponent";
 
 export const router = createBrowserRouter([
   {
@@ -40,5 +41,10 @@ export const router = createBrowserRouter([
   {
     path: "/invoices",
     Component: withAuth(InvoiceList),
+  },
+
+  {
+    path: "/callback",
+    Component: ParentComponent,
   },
 ]);

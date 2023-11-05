@@ -19,6 +19,7 @@ import { useSession } from "../hooks/useSession";
 
 const pages = [
   { title: "Shop", target: "/shop", isUser: true },
+  { title: "Callback", target: "/callback", isUser: true },
   { title: "Produkte", target: "/products", isAdmin: true },
   { title: "Kunden", target: "/customers", isAdmin: true },
   { title: "Rechnungen", target: "/invoices", isAdmin: true },
@@ -138,11 +139,13 @@ function ResponsiveAppBar() {
                   display: { xs: "block", md: "none" },
                 }}
               >
-                {pages.map((page) => (
-                  <MenuItem key={page.title} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page.title}</Typography>
-                  </MenuItem>
-                ))}
+                {pages
+                  .filter((page) => page.isUser && !state.userInfo?.isAdmin)
+                  .map((page) => (
+                    <MenuItem key={page.title} onClick={handleCloseNavMenu}>
+                      <Typography textAlign="center">{page.title}</Typography>
+                    </MenuItem>
+                  ))}
               </Menu>
             </Box>
             <ShoppingCart sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
