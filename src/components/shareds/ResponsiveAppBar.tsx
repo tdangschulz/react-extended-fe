@@ -16,7 +16,6 @@ import { useNavigate } from "react-router-dom";
 import { useGlobalState } from "../../context/globalContext";
 import { ProfileDialog } from "../pages/ProfileDialog";
 import { useSession } from "../hooks/useSession";
-import { LocaleContext } from "../../context/localContext";
 
 const pages = [
   { title: "Shop", target: "/shop", isUser: true },
@@ -47,7 +46,6 @@ function ResponsiveAppBar() {
 
   const navigate = useNavigate();
   const { logout } = useSession();
-  const { switchLocale } = React.useContext(LocaleContext);
 
   const { state } = useGlobalState();
 
@@ -62,8 +60,6 @@ function ResponsiveAppBar() {
       navigate("/customer/invoice");
     } else if (setting.id === "profile") {
       setShowDialog(true);
-    } else if (setting.id === "locale") {
-      switchLocale();
     }
 
     setAnchorElUser(null);

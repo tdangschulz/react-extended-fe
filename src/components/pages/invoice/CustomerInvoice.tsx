@@ -2,7 +2,7 @@ import withRoot from "../../hocs/withRoot";
 import InvoiceList from "./InvoiceList";
 
 const CustomerInvoice = () => {
-  return <InvoiceList invoices={[]}></InvoiceList>;
+  return <InvoiceList></InvoiceList>;
 };
 
 export default withRoot(CustomerInvoice);

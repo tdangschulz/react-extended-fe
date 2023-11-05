@@ -11,7 +11,6 @@ import { useGlobalState } from "../../../context/globalContext";
 import * as React from "react";
 import { Invoice, ShoppingItem } from "../../../models";
 import { saveInvoice } from "../../../api/product";
-import { LocaleContext } from "../../../context/localContext";
 
 const useStyles = {
   root: {
@@ -30,7 +29,6 @@ const useStyles = {
 
 export default function OrderSummaryItem() {
   const { state, dispatch } = useGlobalState();
-  const { locale } = React.useContext(LocaleContext);
   const navigate = useNavigate();
 
   const showInvoice = async () => {
@@ -68,7 +66,7 @@ export default function OrderSummaryItem() {
     <Card sx={useStyles.root}>
       <CardContent>
         <Typography color="textSecondary" gutterBottom sx={useStyles.title}>
-          <strong>{locale.cart}</strong>
+          <strong>{"Cart"}</strong>
         </Typography>
         <hr></hr>
         <Grid container>

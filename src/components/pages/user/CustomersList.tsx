@@ -8,16 +8,16 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import * as React from "react";
 import { deleteCustomer, getCustomers } from "../../../api/userApi";
-import { Profile } from "../../../context/globalContext";
 import withRoot from "../../hocs/withRoot";
+import { Profile } from "../../../models";
 
 const CustomersList: React.FC = () => {
   const [customers, setCustomers] = React.useState<Profile[]>([]);
 
   React.useEffect(() => {
     const fetch = async () => {
-      const avaiableProducts = await getCustomers();
-      setCustomers(avaiableProducts);
+      const availableProducts = await getCustomers();
+      setCustomers(availableProducts);
     };
     fetch();
   }, []);
