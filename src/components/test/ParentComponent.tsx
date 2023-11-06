@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, memo } from "react";
 import withRoot from "../hocs/withRoot";
 
 function ParentComponent() {
@@ -6,7 +6,7 @@ function ParentComponent() {
 
   const incrementCount = useCallback(() => {
     setCount((c) => c + 1);
-  }, [count]);
+  }, []);
 
   const resetCount = useCallback(() => {
     setCount(0);
@@ -15,7 +15,7 @@ function ParentComponent() {
   return (
     <div>
       Count: {count}
-      <ChildComponent onIncrement={incrementCount} onReset={resetCount} />
+      <Child onIncrement={incrementCount} onReset={resetCount} />
     </div>
   );
 }
@@ -25,7 +25,7 @@ type Props = {
   onReset: () => void;
 };
 
-function ChildComponent({ onIncrement, onReset }: Props) {
+const Child = memo(function ChildComponent({ onIncrement, onReset }: Props) {
   useEffect(() => {
     console.log("re-rendering");
   });
@@ -36,6 +36,6 @@ function ChildComponent({ onIncrement, onReset }: Props) {
       <button onClick={onReset}>Reset</button>
     </div>
   );
-}
+});
 
 export default withRoot(ParentComponent);
