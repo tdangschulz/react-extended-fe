@@ -59,6 +59,8 @@ useEffect(() => {
 
 ## Wissenswertes zu Headless Components
 
+https://martinfowler.com/articles/headless-component.html
+
 ## Aufgabe Context API
 
 Als Benutzer möchte ich die Fähigkeit haben, die Sprache der Anwendung zwischen Deutsch und Englisch zu wechseln. Dies soll intuitiv über einen Button möglich sein, der angezeigt wird, wenn ich auf mein Profilbild klicke. Auf diese Weise kann ich die Anwendung in der Sprache nutzen, die ich bevorzuge.
@@ -67,5 +69,3 @@ Erstellen einen LocaleContext und den dazugehörigen LocaleProvider, der in der 
 Der LocaleProvider soll eine Funktion switchLocale bereitstellen, die es ermöglicht, die aktuelle Sprache zu wechseln.
 Die Sprachänderung soll ohne Neuladen der Seite und unter Beibehaltung des aktuellen Anwendungszustands stattfinden.
 Nutzte die `locales.ts`-Datei
-
-https://martinfowler.com/articles/headless-component.html
