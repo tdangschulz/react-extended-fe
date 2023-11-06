@@ -23,7 +23,7 @@ Passen Sie den ShopTable.tsx mit [useEffect](https://react.dev/reference/react/u
 
 Als Benutzer möchte ich, dass die Produkte in der Tabelle automatisch in alphabetischer Reihenfolge sortiert sind, damit ich eine geordnete Übersicht habe und schnell das gewünschte Produkt finden kann.
 
-Ändere dafür nicht die bestehende Liste, nutze dafür [useState](https://react.dev/reference/react/useState) und [useEffect](https://react.dev/reference/react/useEffect)
+Ändere dafür nicht die bestehende Liste, nutze dafür [useState](https://react.dev/reference/react/useState) und [useEffect](https://react.dev/reference/react/useEffect
 
 ## Aufgabe 3
 
@@ -58,5 +58,14 @@ useEffect(() => {
 ```
 
 ## Wissenswertes zu Headless Components
+
+## Aufgabe Context API
+
+Als Benutzer möchte ich die Fähigkeit haben, die Sprache der Anwendung zwischen Deutsch und Englisch zu wechseln. Dies soll intuitiv über einen Button möglich sein, der angezeigt wird, wenn ich auf mein Profilbild klicke. Auf diese Weise kann ich die Anwendung in der Sprache nutzen, die ich bevorzuge.
+
+Erstellen einen LocaleContext und den dazugehörigen LocaleProvider, der in der gesamten Anwendung verfügbar ist. Nutzte dafür die [contextAPI](https://react.dev/reference/react/createContext) und [useContext](https://react.dev/reference/react/useContext).
+Der LocaleProvider soll eine Funktion switchLocale bereitstellen, die es ermöglicht, die aktuelle Sprache zu wechseln.
+Die Sprachänderung soll ohne Neuladen der Seite und unter Beibehaltung des aktuellen Anwendungszustands stattfinden.
+Nutzte die `locales.ts`-Datei
 
 https://martinfowler.com/articles/headless-component.html
