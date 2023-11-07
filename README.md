@@ -75,3 +75,23 @@ Nutzte die `locales.ts`-Datei
 Als Entwickler möchte ich, dass die Rechnungen in der `InvoiceList.tsx` Komponente nach demselben Muster im globalState abgelegt werden, wie es bereits bei den Produktdaten der Fall ist. Dies soll ein einheitliches Handling der verschiedenen Datentypen gewährleisten und mir erlauben, auf konsistente Weise auf die Rechnungsdaten von überall in der Anwendung aus zugreifen zu können.
 
 Extra: `CustomerList.tsx` auch anpassen
+
+## Aufgabe Redux
+
+Als Entwickler möchte ich, dass der bestehende globalContext, der derzeit mit der ContextAPI implementiert ist, zu Redux migriert wird. Ziel ist es, von den Vorteilen von Redux zu profitieren, wie zum Beispiel dem verbesserten State-Management, der Zeitreise-Fähigkeit für Debugging und dem Ökosystem an Middleware, um eine robustere und skalierbare Anwendungsarchitektur zu schaffen.
+
+Die Actions und reducer in der `reducer.ts` sollen alle zu redux migriert werden. Auch alle `dispatch` aufrufen sowie der userReducer-Hook und der globalState sind nach der Migration aus dem Code zu entfernen.
+
+Nutze für die Erstellung des Reducer die [`createSlice`](https://redux.js.org/tutorials/quick-start#create-a-redux-state-slice) Funktion aus `@reduxjs/toolkit`
+
+siehe [redux quick start](https://redux.js.org/tutorials/quick-start)
+
+<details>
+<summary> Fortgechrittene Redux Funktionen (Optional)</summary>
+Das Thema optinal!!
+
+Wer mehr über Redux und asynchrone Aufrufe erfahren möchten, kann sich folgende Links anschauen.
+
+- https://redux-toolkit.js.org/api/createAsyncThunk
+- https://dev.to/ifeanyichima/what-is-createasyncthunk-in-redux--mhe
+</details>
