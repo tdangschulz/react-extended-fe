@@ -73,3 +73,5 @@ Nutzte die `locales.ts`-Datei
 ## Aufgabe Context API - Integration der Rechnungsdaten in den globalState
 
 Als Entwickler möchte ich, dass die Rechnungen in der `InvoiceList.tsx` Komponente nach demselben Muster im globalState abgelegt werden, wie es bereits bei den Produktdaten der Fall ist. Dies soll ein einheitliches Handling der verschiedenen Datentypen gewährleisten und mir erlauben, auf konsistente Weise auf die Rechnungsdaten von überall in der Anwendung aus zugreifen zu können.
+
+Extra: `CustomerList.tsx` auch anpassen
