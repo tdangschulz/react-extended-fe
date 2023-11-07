@@ -61,7 +61,7 @@ useEffect(() => {
 
 https://martinfowler.com/articles/headless-component.html
 
-## Aufgabe Context API
+## Aufgabe Context API - Locale
 
 Als Benutzer möchte ich die Fähigkeit haben, die Sprache der Anwendung zwischen Deutsch und Englisch zu wechseln. Dies soll intuitiv über einen Button möglich sein, der angezeigt wird, wenn ich auf mein Profilbild klicke. Auf diese Weise kann ich die Anwendung in der Sprache nutzen, die ich bevorzuge.
 
@@ -69,3 +69,7 @@ Erstellen einen LocaleContext und den dazugehörigen LocaleProvider, der in der 
 Der LocaleProvider soll eine Funktion switchLocale bereitstellen, die es ermöglicht, die aktuelle Sprache zu wechseln.
 Die Sprachänderung soll ohne Neuladen der Seite und unter Beibehaltung des aktuellen Anwendungszustands stattfinden.
 Nutzte die `locales.ts`-Datei
+
+## Aufgabe Context API - Integration der Rechnungsdaten in den globalState
+
+Als Entwickler möchte ich, dass die Rechnungen in der `InvoiceList.tsx` Komponente nach demselben Muster im globalState abgelegt werden, wie es bereits bei den Produktdaten der Fall ist. Dies soll ein einheitliches Handling der verschiedenen Datentypen gewährleisten und mir erlauben, auf konsistente Weise auf die Rechnungsdaten von überall in der Anwendung aus zugreifen zu können.
