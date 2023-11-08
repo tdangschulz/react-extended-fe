@@ -101,7 +101,9 @@ Wer mehr über Redux und asynchrone Aufrufe erfahren möchten, kann sich folgend
 Als User möchte ich das Editieren der Produkte auf eine Seite anstatt in einem Dialog (`ProductDialog.tsx`). Die Seite soll über die Route `/products/detail` erreichbar sein.
 Im Produktdialog müsen alle Komponente **innerhalb** vom `DialogContent` und der `Speichern`-Buttons in die neue Seite mirgriert werden.
 
-Erweitere dafür die Router KOnfiguration in der `routerConfig.ts` Datei.
+Erweitere dafür die Router Konfiguration in der `routerConfig.ts` Datei.
+
+Für die Navigation zu der neuen eite erfolgt über den Hook [useNavigate](https://reactrouter.com/en/main/hooks/use-navigate)
 
 Damit das zu editierende Produkt auch auf der neuen Seite verwendet werden kann, muss es im Redux-Store abgelegt werden. Sollte kein Redux-Store vorhanden sein, ist stattdessen der GlobalState zu nutzen. Hierfür ist eine Erweiterung des Reducers notwendig. Die Auswahl der Actionnamen bleibt dabei dem Entwicklerteam überlassen.
 
@@ -110,3 +112,10 @@ Damit das zu editierende Produkt auch auf der neuen Seite verwendet werden kann,
 Als Entwickler möchte ich von der statischen Route `/products/detail` zu einer dynamischen Route `/products/{id}` wechseln, um die Editierseite für Produkte zu öffnen. Beim Aufrufen der Seite soll die Produkt-ID aus der URL ausgelesen und verwendet werden, um das Produkt mithilfe der `getProduct` Funktion aus dem Backend zu laden. Sollte die Seite neu geladen werden, muss das Produkt weiterhin angezeigt werden.
 
 Um die ID aus der URL zu extrahieren, soll der `useParams` Hook von React Router verwendet werden. Des Weiteren ist der `useEffect` Hook einzusetzen, um beim initialen Laden der Seite das entsprechende Produkt aus dem Backend zu beziehen.
+
+<details>
+<summary> Extra Aufgabe react-route </summary>
+
+Erstelle eine NotFound-Seite. Immer wenn eine unbekannte Route in der Addressbar eingegeben wird, soll die NotFound-Seiete angezeigt werden. [Siehe](https://www.makeuseof.com/react-router-404-page-create/)
+
+</details>
