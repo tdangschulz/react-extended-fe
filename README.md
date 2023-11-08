@@ -99,7 +99,7 @@ Wer mehr über Redux und asynchrone Aufrufe erfahren möchten, kann sich folgend
 ## Aufgabe react-route a
 
 Als User möchte ich das Editieren der Produkte auf eine Seite anstatt in einem Dialog (`ProductDialog.tsx`). Die Seite soll über die Route `/products/detail` erreichbar sein.
-Im Produktdialog ist es nur nötig alle Komponente **innerhalb** vom `DialogContent` zu mirgrieren.
+Im Produktdialog müsen alle Komponente **innerhalb** vom `DialogContent` und der `Speichern`-Buttons in die neue Seite mirgriert werden.
 
 Erweitere dafür die Router KOnfiguration in der `routerConfig.ts` Datei.
 
