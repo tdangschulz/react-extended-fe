@@ -95,3 +95,18 @@ Wer mehr über Redux und asynchrone Aufrufe erfahren möchten, kann sich folgend
 - https://redux-toolkit.js.org/api/createAsyncThunk
 - https://dev.to/ifeanyichima/what-is-createasyncthunk-in-redux--mhe
 </details>
+
+## Aufgabe react-route a
+
+Als User möchte ich das Editieren der Produkte auf eine Seite anstatt in einem Dialog (`ProductDialog.tsx`). Die Seite soll über die Route `/products/detail` erreichbar sein.
+Im Produktdialog ist es nur nötig alle Komponente **innerhalb** vom `DialogContent` zu mirgrieren.
+
+Erweitere dafür die Router KOnfiguration in der `routerConfig.ts` Datei.
+
+Damit das zu editierende Produkt auch auf der neuen Seite verwendet werden kann, muss es im Redux-Store abgelegt werden. Sollte kein Redux-Store vorhanden sein, ist stattdessen der GlobalState zu nutzen. Hierfür ist eine Erweiterung des Reducers notwendig. Die Auswahl der Actionnamen bleibt dabei dem Entwicklerteam überlassen.
+
+## Aufgabe react-route b
+
+Als Entwickler möchte ich von der statischen Route `/products/detail` zu einer dynamischen Route `/products/{id}` wechseln, um die Editierseite für Produkte zu öffnen. Beim Aufrufen der Seite soll die Produkt-ID aus der URL ausgelesen und verwendet werden, um das Produkt mithilfe der `getProduct` Funktion aus dem Backend zu laden. Sollte die Seite neu geladen werden, muss das Produkt weiterhin angezeigt werden.
+
+Um die ID aus der URL zu extrahieren, soll der `useParams` Hook von React Router verwendet werden. Des Weiteren ist der `useEffect` Hook einzusetzen, um beim initialen Laden der Seite das entsprechende Produkt aus dem Backend zu beziehen.

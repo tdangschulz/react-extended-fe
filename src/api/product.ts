@@ -16,13 +16,17 @@ export const deleteProduct = async (product: Product) => {
   return response.data;
 };
 
+export const getProduct = async (productId: number) => {
+  const response = await axios.delete<Product>("/products/" + productId);
+  return response.data;
+};
+
 export const getInvoices = async () => {
   const response = await axios.get<Invoice[]>("/invoices");
   return response.data.filter((d) => isNaN(Number(d)));
 };
 
 export const saveInvoice = async (invoice: Invoice) => {
-  
   const response = await axios.post<Invoice>("/invoices", invoice);
   return response.data;
 };
